@@ -1,4 +1,7 @@
-
+"""
+Struct representation of the Sine diffusion
+    dXₜ = μ-ωsin(ρXₜ)dt + σdWₜ
+"""
 struct SinPhi <: Phi
     μ::Float64
     ω::Float64
@@ -14,7 +17,6 @@ struct SinPhi <: Phi
         new(μ,ω,ρ,σ,L,l)
     end
 end
-
 
 ϕ(p::SinPhi, x) = 0.5 * ((p.μ/p.σ - sin(p.ρ * p.σ * x) * p.ω / p.σ)^2
                          - p.ρ * p.ω * cos(p.ρ * p.σ * x)) - p.l

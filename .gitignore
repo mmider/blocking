@@ -3,3 +3,4 @@ output/
 *.svg
 *.eps
 .vscode
+Manifest.toml

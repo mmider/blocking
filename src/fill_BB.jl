@@ -1,6 +1,3 @@
-using Distributions
-using Random
-
 function fillBB(T, tt, rtt, rxx)
     @assert T == tt[end]
     @assert tt[1] == 0.0
@@ -31,7 +28,6 @@ function fillBB(T, tt, rtt, rxx)
     xx
 end
 
-
 function sampleBB(x0, xT, t0, T, tt)
     if length(tt)>0
         N = length(tt)
@@ -48,18 +44,3 @@ function sampleBB(x0, xT, t0, T, tt)
     end
     xx
 end
-
-#=
-tt = collect(0:0.001:2)
-rtt = [0.1, 0.5, 1.2, 1.6]
-rxx = 2 .* [0.4, 0.4, 0.4, 0.4]
-xx = fillBB(2,tt,rtt, rxx)
-tt
-xx
-
-using Plots
-
-plot(tt,xx)
-scatter!(rtt, rxx)
-
-=#

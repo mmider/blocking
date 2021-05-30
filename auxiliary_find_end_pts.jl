@@ -1,4 +1,11 @@
-include("sin.jl")
+#=
+This is an auxiliary file in which sine diffusion is sampled forward in time to
+see what are reasonable values at some timepoints in the future for sampling
+diffusion bridges.
+=#
+
+include("src/BlockingCompCost.jl")
+using Main.BlockingCompCost
 using Random
 using Distributions
 

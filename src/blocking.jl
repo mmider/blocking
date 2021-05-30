@@ -1,6 +1,3 @@
-import Base.resize!
-import Distributions.shape
-
 struct NoBlocking <: Blocking
     xx::Vector{Float64}
     ppp::Vector{Float64}
